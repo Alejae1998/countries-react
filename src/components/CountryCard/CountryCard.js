@@ -3,10 +3,10 @@ export default function CountryCard({ name, iso2 }) {
     <div>
       <h1>{name}</h1>
       <img
-        src={`https://flagcdn.com/96x72/${iso2.toLowerCase()}.png`}
-        srcSet={`https://flagcdn.com/192x144/${iso2.toLowerCase()}.png 2x`}
-        width="96"
-        height="72"
+        src={`https://flagcdn.com/112x84/${iso2.toLowerCase()}.png`}
+        srcSet={`https://flagcdn.com/224x168/${iso2.toLowerCase()}.png 2x`}
+        width="112"
+        height="84"
         alt={`${name}`}
       />
     </div>
