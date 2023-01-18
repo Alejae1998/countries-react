@@ -3,7 +3,7 @@ import CountryCard from '../CountryCard/CountryCard.js';
 import Filter from '../Filter/Filter.js';
 
 export default function Main() {
-  const { continent, setContinent, filterCountries } = useCountries();
+  const { continent, setContinent, filterCountries, error } = useCountries();
   return (
     <main>
       <h2>Flags of the world by: Alchemy codeLab</h2>
@@ -13,6 +13,7 @@ export default function Main() {
           <CountryCard key={country.id} {...country} />
         ))}
       </div>
+      {error}
     </main>
   );
 }
