@@ -15,8 +15,7 @@ export function useCountries() {
 
   const filterCountries = () => {
     if (continent === 'All') return countries;
-    const filteredCountries = countries.filter((country) => country.continent);
-    setCountries(filteredCountries);
+    return countries.filter((country) => country.continent === continent);
   };
   return { filterCountries, continent, setContinent };
 }

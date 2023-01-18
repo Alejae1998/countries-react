@@ -4,11 +4,10 @@ import Filter from '../Filter/Filter.js';
 
 export default function Main() {
   const { continent, setContinent, filterCountries } = useCountries();
-
   return (
     <main>
       <h2>Flags of the world by: Alchemy codeLab</h2>
-      <Filter {...{ continent, setContinent }} />
+      <Filter continent={continent} setContinent={setContinent} />
       <div>
         {filterCountries().map((country) => (
           <CountryCard key={country.id} {...country} />
