@@ -12,6 +12,7 @@ export function useCountries() {
     };
     fetchData();
   }, []);
+
   const filterContinents = () => {
     if (continent === 'All') return countries;
     return countries.filter((country) => country.continent);
