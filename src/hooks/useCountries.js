@@ -3,7 +3,7 @@ import { fetchCountries } from '../services/countires.js';
 
 export function useCountries() {
   const [countries, setCountries] = useState([]);
-  const [continent, setContinent] = useState('All');
+  const [continent, setContinent] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,9 +13,10 @@ export function useCountries() {
     fetchData();
   }, []);
 
-  const filterContinents = () => {
+  const filterCountries = () => {
     if (continent === 'All') return countries;
-    return countries.filter((country) => country.continent);
+    const filteredCountries = countries.filter((country) => country.continent);
+    setCountries(filteredCountries);
   };
-  return { filterContinents, continent, setContinent };
+  return { filterCountries, continent, setContinent };
 }
